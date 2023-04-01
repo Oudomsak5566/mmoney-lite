@@ -1,0 +1,73 @@
+
+### Get History
+post https://vendor.mmoney.la/getHistory
+Content-Type: application/application/json
+
+{
+    "wallet_id":"2386801761" ,
+    "type":"UAT" 
+}
+
+
+### VerifyQR static
+ 
+post https://vendor.mmoney.la/VerifyQR
+Content-Type: application/application/json
+
+{
+    "transID":"2023032119515110095104" ,
+    "qrCode":"0002010102115208MERCHANT53034185502005602005702005802LA593237c46626539e11672f7384dd3d916cde6009Vientiane8102006304f0df" ,
+    "type":"UAT"
+}
+
+### VerifyQR dynamic
+ post https://vendor.mmoney.la/VerifyQR
+Content-Type: application/application/json
+
+{
+    "transID":"2023032119515110095104" ,
+    "qrCode":"0002010102125208MERCHANT5303418550510000560105702005802LA593237c46626539e11672f7384dd3d916cde6009Vientiane8102006304e19e" ,
+    "type":"UAT"
+}
+
+
+
+
+
+###  ConfirmQR
+
+post https://vendor.mmoney.la/ConfirmQR
+Content-Type: application/application/json
+
+{
+    "transID":"2023032119515110095105" ,
+    "qrCode":"0002010102115208MERCHANT53034185502005602005702005802LA593237c46626539e11672f7384dd3d916cde6009Vientiane8102006304f0df" ,
+    "type":"UAT",
+    "amount": "100000"
+}
+
+
+### Cash In
+
+post https://vendor.mmoney.la/CashIn
+Content-Type: application/application/json
+
+{
+    "transID":"202303211951511009520" ,
+    "msisdn" : "2054656226",  
+    "amount": "15000",
+    "type" : "UAT"
+}
+
+
+###  Cash Out
+
+post https://vendor.mmoney.la/CashOut
+Content-Type: application/application/json
+
+{
+    "transID":"20230321195151100952121" ,
+    "msisdn" : "2054656226",  
+    "amount": "10000",
+    "type" : "UAT"
+}

@@ -1,0 +1,86 @@
+// login
+###
+POST http://172.28.14.87:1337/signup 
+content-type: application/json
+
+{
+    "msisdn": "2052555999",
+    "birthday": "1990-09-02"
+}
+
+//confirm otp
+###
+POST http://172.28.14.87:1337/confirmOTP 
+content-type: application/json
+
+{
+    "otp": "954671",
+    "ref": "dUYtQ"
+}
+
+
+//register otp
+###
+POST http://172.28.14.87:1337/register 
+content-type: application/json
+
+{
+    "msisdn": "2052555999",
+    "pin": "11111"
+}
+
+//delete user to be new register
+###
+POST http://172.28.14.87:1337/delete 
+content-type: application/json
+
+{
+    "msisdn": "2052555999"
+}
+
+
+
+//check register
+###
+POST http://172.28.14.87:1337/verify 
+content-type: application/json
+
+{
+    "msisdn": "2052555999"
+}
+
+
+//login
+###
+POST http://172.28.14.87:1337/login 
+content-type: application/json
+
+{
+    "msisdn": "2052555999",
+    "pin": "1111"
+}
+
+
+
+
+//getBalance
+###
+POST http://172.28.14.87:1337/getBalance 
+content-type: application/json
+
+{
+    "msisdn": "2052555999"
+}
+
+# {
+#   "resultCode": 0,
+#   "resultDesc": "Operation Success.",
+#   "data": {
+#     "id": 51,
+#     "msisdn": "2052555999",
+#     "pin": "$2b$10$aN6MObCnoWvmDyhW.MI7R.5FbDUwPCtk6Jr/rvSoiNnw0BCdRjVNC",
+#     "status": "true",
+#     "created": "2023-02-01 15:32:25",
+#     "token": "$2b$15$Hcdc7qOPDkuf/fVbLpMBA.RT7RiXqfOoi.popyUcCrzATDaCzF2yy"
+#   }
+# }
